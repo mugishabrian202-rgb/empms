@@ -1,0 +1,64 @@
+#root {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Simple header style */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 1.25rem;
+}
+.app-title {
+  display: flex;
+  gap: .75rem;
+  align-items: center;
+}
+.app-title h1 { margin: 0; font-size: 1.6rem; font-weight: 800; color: #f8fbff; }
+.app-sub { color: #9fb0c9; font-weight: 600; font-size: .95rem; }
+
+/* Layout tweaks */
+.grid-modern { display: grid; gap: 1.5rem; grid-template-columns: 1fr; }
+@media(min-width: 768px) { .grid-modern { grid-template-columns: 1fr 1fr; } }
+@media(min-width: 1100px) { .grid-modern { grid-template-columns: 420px 1fr; } }
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
