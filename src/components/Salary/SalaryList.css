@@ -1,0 +1,185 @@
+.salary-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.list-header .card-title {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--text);
+  flex: 0 0 auto;
+}
+
+.sort-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.sort-label {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.sort-select {
+  background: var(--card-bg);
+  color: var(--text);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.6rem;
+  font-size: 0.9rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.sort-select:hover {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.sort-select:focus {
+  outline: none;
+  border-color: rgba(124, 92, 255, 0.9);
+  box-shadow: 0 0 0 3px rgba(124, 92, 255, 0.1);
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 2rem 1rem;
+  min-height: 200px;
+  border: 1px dashed rgba(255, 255, 255, 0.06);
+  border-radius: 0.8rem;
+  background: rgba(255, 255, 255, 0.01);
+}
+
+.empty-icon {
+  font-size: 3rem;
+  opacity: 0.5;
+  color: var(--muted);
+}
+
+.salary-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 0.8rem;
+  background: rgba(255, 255, 255, 0.01);
+}
+
+.salary-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  background: transparent;
+}
+
+.salary-table thead {
+  background: linear-gradient(90deg, rgba(124, 92, 255, 0.1), rgba(74, 146, 255, 0.1));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.salary-table th {
+  padding: 1rem 0.75rem;
+  text-align: left;
+  color: var(--muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+}
+
+.salary-table td {
+  padding: 0.875rem 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  background: transparent;
+}
+
+.salary-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.col-name {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.col-salary {
+  font-weight: 700;
+  color: #7c5cff;
+}
+
+/* Light theme */
+html.light .list-header {
+  border-bottom-color: rgba(0, 0, 0, 0.08);
+}
+
+html.light .sort-select {
+  background: rgba(2, 6, 23, 0.03);
+  border-color: rgba(0, 0, 0, 0.08);
+  color: #0b1220;
+}
+
+html.light .sort-select:hover {
+  border-color: rgba(0, 0, 0, 0.16);
+  background: rgba(2, 6, 23, 0.06);
+}
+
+html.light .sort-select:focus {
+  border-color: #5b21b6;
+  box-shadow: 0 0 0 3px rgba(91, 33, 182, 0.1);
+}
+
+html.light .empty-state {
+  border-color: rgba(0, 0, 0, 0.08);
+  background: rgba(0, 0, 0, 0.02);
+}
+
+html.light .empty-icon {
+  color: #6b7280;
+}
+
+html.light .salary-table-wrapper {
+  border-color: rgba(0, 0, 0, 0.08);
+  background: rgba(0, 0, 0, 0.01);
+}
+
+html.light .salary-table thead {
+  background: linear-gradient(90deg, rgba(91, 33, 182, 0.1), rgba(14, 165, 233, 0.1));
+  border-bottom-color: rgba(0, 0, 0, 0.08);
+}
+
+html.light .salary-table td {
+  border-bottom-color: rgba(0, 0, 0, 0.04);
+  color: #0b1220;
+}
+
+html.light .salary-table tbody tr:hover {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+html.light .col-name {
+  color: #0b1220;
+}
+
+html.light .col-salary {
+  color: #5b21b6;
+}

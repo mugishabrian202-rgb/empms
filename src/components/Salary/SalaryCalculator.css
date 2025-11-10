@@ -1,0 +1,91 @@
+.salary-calculator {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: 100%;
+}
+
+.calc-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding-bottom: 1rem;
+}
+
+.calc-header .card-title {
+  margin: 0 0 0.3rem 0;
+  font-size: 1.25rem;
+}
+
+.calc-subtitle {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.calc-metrics {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.metric-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, rgba(124, 92, 255, 0.08), rgba(74, 146, 255, 0.08));
+  border: 1px solid rgba(124, 92, 255, 0.15);
+  border-radius: 0.8rem;
+  transition: all 0.2s ease;
+}
+
+.metric-card:hover {
+  background: linear-gradient(135deg, rgba(124, 92, 255, 0.12), rgba(74, 146, 255, 0.12));
+  border-color: rgba(124, 92, 255, 0.25);
+}
+
+.metric-icon {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+}
+
+.metric-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  flex: 1;
+}
+
+.metric-label {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.metric-value {
+  margin: 0;
+  color: var(--text);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Light theme */
+html.light .calc-header {
+  border-bottom-color: rgba(0, 0, 0, 0.08);
+}
+
+html.light .metric-card {
+  background: linear-gradient(135deg, rgba(91, 33, 182, 0.08), rgba(14, 165, 233, 0.08));
+  border-color: rgba(91, 33, 182, 0.15);
+}
+
+html.light .metric-card:hover {
+  background: linear-gradient(135deg, rgba(91, 33, 182, 0.12), rgba(14, 165, 233, 0.12));
+  border-color: rgba(91, 33, 182, 0.25);
+}
